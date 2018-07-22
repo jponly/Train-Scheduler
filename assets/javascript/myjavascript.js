@@ -31,7 +31,7 @@ database.ref().on("child_added", function (snapshot) {
 
     var tFrequency = trainFrequency;
     var firstTime = trainTime;
-     
+
 
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
@@ -56,13 +56,15 @@ database.ref().on("child_added", function (snapshot) {
     var newRow = $("<tr>").append(
         $("<td>").text(trainName),
         $("<td>").text(trainDest),
-        $("<td>").text(trainFrequency),
+        $("<td>").text(trainFrequency + " Minutes"),
         $("<td>").text(nextTrain),
-        $("<td>").text(tMinutesTillTrain)
+        $("<td>").text(tMinutesTillTrain + " Minutes"),
 
-    );
+);
 
-    $("table tbody").append(newRow);
+
+
+$("table tbody").append(newRow);
 
 
 
