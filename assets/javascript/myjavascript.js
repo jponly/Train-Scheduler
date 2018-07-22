@@ -60,11 +60,11 @@ database.ref().on("child_added", function (snapshot) {
         $("<td>").text(nextTrain),
         $("<td>").text(tMinutesTillTrain + " Minutes"),
 
-);
+    );
 
 
 
-$("table tbody").append(newRow);
+    $("table tbody").append(newRow);
 
 
 
