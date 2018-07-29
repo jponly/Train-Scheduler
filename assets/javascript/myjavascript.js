@@ -13,6 +13,7 @@ var database = firebase.database();
 
 
 $("#form-submit").on("click", function () {
+    event.preventDefault();
     database.ref().push({
         name: $("#train_name").val().trim(),
         dest: $("#train_dest").val().trim(),
